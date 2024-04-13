@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Portfolio</title>
+</head>
+
+<style>
+    .image-1{
+        height: auto;
+        width: 100%;
+    }
+    .home-section, .nav-heading, .project-form-section, .projects-section {
+        background-color: #f8f9fa;
+    }
+    .para {
+        font-size: 18px;
+    }
+    .project-form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textarea-height{
+        height: 140px;
+    }
+    .heading:after{
+        content: "";
+        display: block;
+        border-bottom: 4px solid orange;
+        width: 89px;
+        border-radius: 6px;       
+        margin-left: 60px;
+        margin-top: 12px;   
+    }
+   
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .project{
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+    }
+    .p-image{
+        height: auto;
+        width: 50%;
+    }
+    .d2 {
+        order: 1;
+        text-align: start;
+    }
+    .d1 {
+        text-align: start;
+    }
+    .footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .footer-last{
+        order: 2;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class='navbar-section'>
+                    <nav class="navbar navbar-expand-lg navbar-light  pb-0">
+                        <a class="navbar-brand nav-heading ps-4 col-6" href="#">Modelyn Torff</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse bg-warning col-5" id="navbarSupportedContent">
+                          <ul class="navbar-nav w-100 text-center">
+                            <li class="nav-item col-4">
+                              <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item col-4">
+                              <a class="nav-link" href="#ProjectsSection">Projects</a>
+                            </li>
+                            <li class="nav-item col-4">
+                              <a class="nav-link" href="#">Contacts</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div id="HomeSection" class="home-section d-flex justify-content-between w-100">
+                    <div class="home-details ps-4 pe-4 pt-4 col-5">
+                        <h6 class="text-warning">UI/UX DESINGER</h6>
+                        <h1>Hello, my name is Kalpana Poonamalli</h1>
+                        <p class="pt-2 para">I am working as an Intern at IFOCUS SYSTEC for the TestServ Project UI Development.
+                           I have hands-on knowledge of technologies such as HTML, CSS, BOOTSTRAP, JAVASCRIPT, and Python.
+                        </p>
+                        <div class="d-flex mt-4">
+                            <button type="button" class="btn btn-warning text-black me-2" onclick="toggleSections()">Projects</button>
+                            <button type="button" class="btn btn-outline-primary text-black">LinkedIn</button> 
+                        </div>
+                    </div>
+                    <div class="home-image col-7">
+                        <img src="images/img-1" alt="portfolio Image" class="image-1 ps-2">
+                    </div>
+                </div>
+
+                <div id="ProjectFormSection" class="project-form-section col-12 pt-3 pb-4">
+                    <h1 class="text-center heading">Add Project</h1>
+                    <form id="ProjectForm" class="col-6 mt-4">
+                        <div class="form-group mb-3">
+                            <label for="projectName" class="control-label w-100 mb-1">Project Name</label>
+                            <input type="text" id="projectName" class="form-control"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="projectLink" class="control-label w-100 mb-1">Project Link</label>
+                            <input type="text" id="projectLink" class="form-control"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="projectDes" class="control-label w-100 mb-1">Description</label>
+                            <textarea id="projectDes" class="form-control textarea-height"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-warning" onclick="addProject()">Add</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="ProjectsSection" class="projects-section text-center col-12">
+
+                    <footer class="d-flex flex-wrap flex-column justify-content-center align-items-center py-3 my-4 border-top footer-last">
+                        <div class="col-md-4 d-flex align-items-center">
+                          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                          </a>
+                          <span class="mb-3 mb-md-0 text-muted">Copyright © 2024, All rights reserved</span>
+                        </div>
+                    
+                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                        </ul>
+                      </footer>
+                </div>
+
+                <div class="footer">
+                    <img src="images/footer" alt="footer" class="w-100"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-bO5G0T5xaRGJLOWDb1gtH6sREVEa5e9T9FItzceHSizo3L/2oiCp1JrLrhKYj6y" crossorigin="anonymous"></script>
+
+    <script>
+        var images = ["images/img-2", "images/img-3", "images/img-4"];
+        var projectsArray = [];
+
+        function addProject() {
+            var projectName = document.getElementById('projectName').value;
+            var projectLink = document.getElementById('projectLink').value;
+            var projectDescription = document.getElementById('projectDes').value;
+
+            if (projectName && projectLink && projectDescription) {
+                var project = {
+                    name: projectName,
+                    link: projectLink,
+                    description: projectDescription
+                };
+
+                projectsArray.push(project);
+
+                document.getElementById('projectName').value = '';
+                document.getElementById('projectLink').value = '';
+                document.getElementById('projectDes').value = '';
+
+                alert('Project added successfully');
+
+                console.log(projectsArray);
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+
+        function toggleSections() {
+            var homeSection = document.getElementById('HomeSection');
+            var projectFormSection = document.getElementById('ProjectFormSection');
+            var projectsSection = document.getElementById('ProjectsSection');
+
+            homeSection.style.display = 'none';
+            projectFormSection.style.display = 'none';
+            projectsSection.style.display = 'block';
+
+            // Clear existing content in the ProjectsSection
+            document.getElementById('ProjectsSection').innerHTML = '';
+
+            if (projectsArray.length > 0) {
+                var mainHead = document.createElement("h1");
+                mainHead.textContent = "Projects";
+                mainHead.classList.add('p-heading', 'col-12');
+                document.getElementById('ProjectsSection').appendChild(mainHead);
+
+                for (let i = 0; i < projectsArray.length; i++) {
+                    var divElement = document.createElement("div");
+                    divElement.classList.add('project', 'col-10', 'mt-3', 'mb-3', 'rounded-4');
+
+                    var divElement1 = document.createElement("div");
+                    if (i % 2 !== 0) {
+                        divElement1.classList.add('d2', 'col-6', 'pe-4');
+                    } else {
+                        divElement1.classList.add('d1', 'col-6', 'ps-4')
+                    }
+
+                    var heading = document.createElement("h3");
+                    heading.textContent = projectsArray[i].name;
+                    divElement1.appendChild(heading);
+
+                    var para = document.createElement("p");
+                    para.textContent = projectsArray[i].description;
+                    para.classList.add('para')
+                    divElement1.appendChild(para);
+
+                    var button = document.createElement("button");
+                    button.textContent = "View Details";
+                    button.classList.add("btn", "btn-outline-dark", "view-button", "rounded-5");
+                    button.addEventListener('click', function () {
+                        window.open(projectsArray[i].link, '_blank');
+                    });
+                    divElement1.appendChild(button);
+
+                    divElement.appendChild(divElement1)
+
+                    var divElement2 = document.createElement("div");
+
+                    var image = document.createElement("img");
+                    var randomIndex = Math.floor(Math.random() * images.length);
+                    image.src = images[randomIndex];
+                    image.classList.add('p-image');
+                    divElement2.appendChild(image);
+
+                    divElement.appendChild(divElement2);
+                    
+                    document.getElementById('ProjectsSection').appendChild(divElement);
+                }
+            } else {
+                var mainHead = document.createElement("h1");
+                mainHead.textContent = "Projects";
+                mainHead.classList.add('p-heading');
+                document.getElementById('ProjectsSection').appendChild(mainHead);
+
+                var divElement3 = document.createElement("div");
+                divElement3.textContent = "Please add a project to view."
+                divElement3.classList.add('mt-3', 'text-center')
+
+                document.getElementById('ProjectsSection').appendChild(divElement3);
+            }
+        }
+                
+        var projectsButton = document.querySelector('.btn.btn-warning.text-black');
+        projectsButton.addEventListener('click', toggleSections);
+    </script>
+</body>
+</html>
